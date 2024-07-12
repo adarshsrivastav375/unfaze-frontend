@@ -1,39 +1,57 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png.png";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { useState } from "react";
+import logo from "../assets/logo.png";
+import { FaArrowRight } from "react-icons/fa";
+
 export default function Header() {
+  // State variable to track mobile menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Function to toggle mobile menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="shadow sticky z-50 top-0 rounded-b-xl overflow-hidden">
-      <nav className="bg-white border-gray-200 px-4 lg:px-20  py-2.5">
+      <nav className="bg-white border-gray-200 px-4 lg:px-20 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} className="mr-3 h-12" alt="Logo" />
+            <img src={logo} className="h-12" alt="Logo" />
           </Link>
-          <div className="flex items-center lg:order-2">
-            <Link
-              to="/therapists"
-              className="bg-orange-500 text-white py-2 px-4 rounded flex items-center space-x-2 transition-transform transform hover:scale-110"
-            >
-              <span className="text-sm">find your therapist</span>{" "}
-              <span>
-                {" "}
-                <FaArrowRightLong />
-              </span>
-            </Link>
-          </div>
-          <div
-            className=" justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-            id="mobile-menu-2"
+
+          {/* Menu Toggle Button (for mobile) */}
+          <button
+            className="lg:hidden focus:outline-none"
+            aria-label="Toggle navigation"
+            onClick={toggleMenu}
           >
-            <ul className="flex mt-4 font-medium lg:flex-row lg:space-x-10 lg:mt-0">
+            <svg
+              className="w-6 h-6 text-gray-600"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+
+          {/* Menu Links */}
+          <div className={`w-full lg:flex lg:items-center lg:w-auto ${isMenuOpen ? "" : "hidden"}`}>
+            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-10 lg:mt-0">
               <li>
                 <NavLink
+                  exact
                   to="/"
-                  className={({ isActive }) =>
-                    ` ${
-                      isActive ? "text-orange-500 border-b-2 border-orange-500" : "text-gray-700 border-b-2 border-transparent"
-                    } block duration-200 hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-500 pb-2 `
-                  }
+                  activeClassName="text-orange-500 border-b-2 border-orange-500"
+                  className="block duration-200 hover:bg-gray-50 hover:text-orange-500 pb-2"
+                  onClick={toggleMenu} // Close menu on click
                 >
                   Home
                 </NavLink>
@@ -41,11 +59,9 @@ export default function Header() {
               <li>
                 <NavLink
                   to="/services"
-                  className={({ isActive }) =>
-                    ` ${
-                      isActive ? "text-orange-500 border-b-2 border-orange-500" : "text-gray-700 border-b-2 border-transparent"
-                    } block duration-200 hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-500 pb-2 `
-                  }
+                  activeClassName="text-orange-500 border-b-2 border-orange-500"
+                  className="block duration-200 hover:bg-gray-50 hover:text-orange-500 pb-2"
+                  onClick={toggleMenu} // Close menu on click
                 >
                   Services
                 </NavLink>
@@ -53,11 +69,9 @@ export default function Header() {
               <li>
                 <NavLink
                   to="/about"
-                  className={({ isActive }) =>
-                    ` ${
-                      isActive ? "text-orange-500 border-b-2 border-orange-500" : "text-gray-700 border-b-2 border-transparent"
-                    } block duration-200 hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-500 pb-2 `
-                  }
+                  activeClassName="text-orange-500 border-b-2 border-orange-500"
+                  className="block duration-200 hover:bg-gray-50 hover:text-orange-500 pb-2"
+                  onClick={toggleMenu} // Close menu on click
                 >
                   About us
                 </NavLink>
@@ -65,11 +79,9 @@ export default function Header() {
               <li>
                 <NavLink
                   to="/blog"
-                  className={({ isActive }) =>
-                  ` ${
-                      isActive ? "text-orange-500 border-b-2 border-orange-500" : "text-gray-700 border-b-2 border-transparent"
-                    } block duration-200 hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-500 pb-2 `
-                  }
+                  activeClassName="text-orange-500 border-b-2 border-orange-500"
+                  className="block duration-200 hover:bg-gray-50 hover:text-orange-500 pb-2"
+                  onClick={toggleMenu} // Close menu on click
                 >
                   Blog
                 </NavLink>
@@ -77,11 +89,9 @@ export default function Header() {
               <li>
                 <NavLink
                   to="/contact-us"
-                  className={({ isActive }) =>
-                  ` ${
-                      isActive ? "text-orange-500 border-b-2 border-orange-500" : "text-gray-700"
-                    } block duration-200 hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-500 pb-2 `
-                  }
+                  activeClassName="text-orange-500 border-b-2 border-orange-500"
+                  className="block duration-200 hover:bg-gray-50 hover:text-orange-500 pb-2"
+                  onClick={toggleMenu} // Close menu on click
                 >
                   Contact us
                 </NavLink>
@@ -89,16 +99,28 @@ export default function Header() {
               <li>
                 <NavLink
                   to="/join-team"
-                  className={({ isActive }) =>
-                   ` ${
-                      isActive ? "text-orange-500 border-b-2 border-orange-500" : "text-gray-700 border-b-2 border-transparent"
-                    } block duration-200 hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-500 pb-2 `
-                  }
+                  activeClassName="text-orange-500 border-b-2 border-orange-500"
+                  className="block duration-200 hover:bg-gray-50 hover:text-orange-500 pb-2"
+                  onClick={toggleMenu} // Close menu on click
                 >
                   Join our team
                 </NavLink>
               </li>
             </ul>
+          </div>
+
+          {/* Call to Action Button */}
+          <div className="flex items-center justify-center mt-4 lg:mt-0 lg:order-2">
+            <Link
+              to="/therapists"
+              className="bg-orange-500 text-white py-2 px-4 rounded flex items-center space-x-2 transition-transform transform hover:scale-110"
+            >
+              <span className="text-sm">find your therapist</span>{" "}
+              <span>
+                {" "}
+                <FaArrowRight />
+              </span>
+            </Link>
           </div>
         </div>
       </nav>

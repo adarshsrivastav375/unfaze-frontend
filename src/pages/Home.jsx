@@ -2,8 +2,9 @@ import BookingSection from "../components/home/BookingSection";
 import About from "./About";
 import SessionTypes from "./Services";
 import HowWeCanBenefit from "./Process";
-import MeetOurTherapists from "./MeatOur therapists";
+import MeetOurTherapists from "./MeatOurTherapists";
 import BookSession from "./BookSession";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <HowWeCanBenefit />
       <MeetOurTherapists />
       <BookSession />
+      <Footer />
     </>
   );
 }

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Playfair Display", "serif"],
-        body: ["Source Sans Pro", "sans-serif"],
+        main: ["Open+Sans"],
+        second:["Noto+Sans+Mono"]
       },
     },
   },

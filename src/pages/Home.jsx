@@ -1,22 +1,25 @@
-import BookingSection from "../components/home/BookingSection";
-import About from "./About";
+import Hero from "../components/home/Hero";
+import About from "../components/home/About";
 import SessionTypes from "./Services";
 import HowWeCanBenefit from "./Process";
-import MeetOurTherapists from "./MeatOurTherapists";
+import MeetOurTherapists from "./MeatOurTherapy";
 import BookSession from "./BookSession";
-import Footer from "../components/Footer";
+
+import Blog from "../components/Blog";
+import JoinCommunity from "../components/JoinCommunity";
 
 function Home() {
   return (
-    <>
-      <BookingSection />
+    <div className="w-full">
+      <Hero />
       <About />
       <SessionTypes />
       <HowWeCanBenefit />
       <MeetOurTherapists />
       <BookSession />
-      <Footer />
-    </>
+      <Blog />
+      <JoinCommunity />
+    </div>
   );
 }
 

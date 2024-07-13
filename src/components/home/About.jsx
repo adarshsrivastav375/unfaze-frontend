@@ -1,5 +1,5 @@
-import background from "../assets/about-bg.jpg";
-import background2 from "../assets/about-img.png";
+import background from "../../assets/about-bg.jpg";
+import background2 from "../../assets/about-img.png";
 import { SiTicktick } from "react-icons/si";
 import { FaArrowCircleRight } from "react-icons/fa";
 

@@ -1,7 +1,8 @@
 import background from "../../assets/about-bg.jpg";
 import background2 from "../../assets/about-img.png";
 import { SiTicktick } from "react-icons/si";
-import { FaArrowCircleRight } from "react-icons/fa";
+import ArrowButton from "../ArrowButton";
+
 
 const About = () => {
   const services = [
@@ -47,16 +48,10 @@ const About = () => {
           </div>
         </div>
         <div className="container mx-auto text-center md:text-left">
-          <button className="bg-blue-500 text-white text-sm py-3 px-6 rounded-lg transition-transform transform hover:scale-105 flex items-center">
-            Get To Know Our Therapists
-            <span className="ml-2">
-              <FaArrowCircleRight />
-            </span>
-          </button>
+          <ArrowButton name={"Get to know Our Therapists"} />
         </div>
       </div>
-      <div
-        className="overflow-hidden w-full md:w-1/2 h-60 md:h-auto z-10"
+      <div className="overflow-hidden w-full md:w-1/2 h-60 md:h-96 z-10"
         style={{
           backgroundImage: `url(${background2})`,
           backgroundSize: "contain",

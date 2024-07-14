@@ -1,22 +1,19 @@
-import img from "../assets/joinCommunity.png";
+import bgImg from "../assets/joinCommunity.png";
+import ArrowButton from "./ArrowButton";
 const JoinCommunity = () => {
   return (
-    <div className="flex flex-col justify-center py-16 bg-white px-">
-      <h2 className="text-orange-600 text-sm font-bold mb-2 text-start">
-        Join Our Community
-      </h2>
-      <div className="flex flex-col-reverse md:flex-row">
-        <div className="max-w-4xl mx-auto text-center flex flex-col justify-start">
-          <h1 className="text-3xl font-extrabold text-gray-900 mb-6">
-            Together We Can Make Great Progress
-          </h1>
-          <button className="px-6 py-3 bg-blue-500 text-white rounded-full font-medium shadow-md w-1/2 hover:bg-blue-600 transition duration-300 ease-in-out">
-            Apply Today
-          </button>
-        </div>
-        <div className="mt-10 w-[60%]">
-          <img src={img} alt="image" className="shadow-lg" />
-        </div>
+    <div className="flex flex-col md:flex-row items-center justify-center p-6 bg-white">
+      <div className="w-full md:w-[60%] p-4 z-20">
+        <h1 className="text-orange-500 text-sm font-bold">JOIN OUR COMMUNITY</h1>
+        <h2 className="text-6xl font-bold text-black my-4">Together We Can Make Great Progress</h2>
+        <ArrowButton name={"Apply Today"} />
+      </div>
+      <div className="w-full md:[60%] p-4">
+        <img
+          src={bgImg}
+          alt="Woman on laptop"
+          className="rounded-md"
+        />
       </div>
     </div>
   );

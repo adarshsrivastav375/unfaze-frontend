@@ -18,7 +18,7 @@ function App() {
         },
         {
           path: "/adult-therapy",
-          element: <AdultTherapy />,
+          element: <AdultTherapy/>,
         },
         {
           path: "/about",

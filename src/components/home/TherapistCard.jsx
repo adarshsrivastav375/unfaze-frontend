@@ -1,4 +1,4 @@
-import ImageCard from "./ImageCard";
+import ImageCard from "../ImageCard";
 import { Link } from "react-router-dom";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { TiSocialTwitterCircular } from "react-icons/ti";

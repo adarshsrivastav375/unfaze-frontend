@@ -3,7 +3,6 @@ import background2 from "../../assets/about-img.png";
 import { SiTicktick } from "react-icons/si";
 import ArrowButton from "../ArrowButton";
 
-
 const About = () => {
   const services = [
     "Individual Therapy",
@@ -51,7 +50,8 @@ const About = () => {
           <ArrowButton name={"Get to know Our Therapists"} />
         </div>
       </div>
-      <div className="overflow-hidden w-full md:w-1/2 h-60 md:h-96 z-10"
+      <div
+        className="overflow-hidden w-full md:w-1/2 h-60 md:h-96 z-10"
         style={{
           backgroundImage: `url(${background2})`,
           backgroundSize: "contain",

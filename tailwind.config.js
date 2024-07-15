@@ -8,8 +8,8 @@ export default {
         secondary: "#469BAF",
       },
       fontFamily: {
-        main: ["Open+Sans"],
-        second: ["Noto+Sans+Mono"],
+        heading: ["Castoro"],
+        poppins: ["Poppins"],
       },
     },
   },

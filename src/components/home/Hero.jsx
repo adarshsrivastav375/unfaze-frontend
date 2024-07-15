@@ -10,10 +10,11 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col  w-full md:w-1/2 mr-auto ml-20">
+      <div className="flex flex-col  w-full mr-auto ml-20">
         <div className="text-center mb-8 mt-10 pt-10">
-          <h1 className="text-2xl md:text-6xl xl:text-6xl  font-bold text-left text-white">
-            Congratulation! You&apos;re already ahead of 16 crore People
+          <h1 className="text-2xl md:text-5xl xl:text-6xl font-bold text-left leading-3 text-white">
+            Congratulation! You&apos;re <br />
+            already ahead of 16 crore <br /> People
           </h1>
         </div>
         <div className=" hidden lg:flex mb-8">

@@ -1,7 +1,8 @@
-import TherapistButtonCard from "../TherapistButtonCard";
+import TherapistCard from "../components/home/TherapistCard";
 import therapistImg from "../assets/therapiest.jpg";
+import FAQ from "../components/adultTherapy/FAQ";
 
-const SeeAllTherapists = () => {
+const TherapistPage = () => {
   const therapists = [
     {
       name: "Leona Raine",
@@ -26,11 +27,17 @@ const SeeAllTherapists = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-12 px-16">
         {therapists.map((therapist, index) => (
-          <TherapistButtonCard key={index} {...therapist} />
+          <TherapistCard key={index} {...therapist} />
         ))}
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-12 px-16">
+        {therapists.map((therapist, index) => (
+          <TherapistCard key={index} {...therapist} />
+        ))}
+      </div>
+      <FAQ />
     </div>
   );
 };
 
-export default SeeAllTherapists;
+export default TherapistPage;

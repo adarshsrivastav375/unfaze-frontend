@@ -3,8 +3,9 @@ import Layout from "./pages/Layout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
-import About from "./components/home/About";
+
 import AdultTherapy from "./pages/AdultTherapy";
+import TherapistPage from "./pages/TherapistPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,11 +19,11 @@ function App() {
         },
         {
           path: "/adult-therapy",
-          element: <AdultTherapy/>,
+          element: <AdultTherapy />,
         },
         {
-          path: "/about",
-          element: <About />,
+          path: "/therapists",
+          element: <TherapistPage/>,
         },
         {
           path: "/blog",

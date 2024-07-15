@@ -2,17 +2,21 @@ import Hero from "../components/adultTherapy/Hero";
 import Hero2 from "../components/adultTherapy/Hero2";
 import TherapyApproach from "../components/adultTherapy/TherapyApproach";
 import TherapyTypes from "../components/adultTherapy/TherapyTypes";
-import MeetOurTherapists from "./MeatOurTherapists"
+import MeetOurTherapists from "./MeatOurTherapists";
+import Blog from "../components/Blog";
+import NotSureNeed from "../components/adultTherapy/NotSureNeed";
+import FAQ from "../components/adultTherapy/FAQ";
 const AdultTherapy = () => {
   return (
-    <div className="mt-5 p-5 flex justify-center items-center flex-col">
+    <div className="mt-10 flex justify-center items-center flex-col">
       <Hero />
       <Hero2 />
       <TherapyTypes />
       <TherapyApproach />
       <MeetOurTherapists />
-      <Hero />
-      <Hero />
+      <Blog />
+      <NotSureNeed />
+      <FAQ />
     </div>
   );
 };

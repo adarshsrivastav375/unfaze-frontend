@@ -1,6 +1,6 @@
 import logo from "../assets/logo.png";
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
@@ -28,7 +28,7 @@ const Navbar = () => {
 
           <nav className="hidden md:flex flex-row items-center text-lg font-sm gap-8 ">
             <Link
-              to="home"
+              to="/"
               spy={true}
               smooth={true}
               duration={500}
@@ -39,7 +39,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="Services"
+              to="/adult-therapy"
               spy={true}
               smooth={true}
               duration={500}

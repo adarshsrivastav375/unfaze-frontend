@@ -94,7 +94,7 @@ const Navbar = () => {
           </nav>
 
           <div className=" hidden lg:flex text-lg font-sm">
-            <Button title="Find your therapist" />
+            <Button className="bg-primary">Find Your Therapy</Button>
           </div>
 
           <div className="md:hidden flex items-center">
